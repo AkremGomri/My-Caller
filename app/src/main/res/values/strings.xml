@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="welcome">welcome</string>
+    <string name="email">e-mail</string>
+    <string name="password">password</string>
+    <string name="validate">validate</string>
+    <string name="quit">quit</string>
+    <string name="contact">contact</string>
+    <string name="addContact">add contact</string>
+    <string name="name">name</string>
+    <string name="lastName">last name</string>
+    <string name="number">number</string>
+</resources>

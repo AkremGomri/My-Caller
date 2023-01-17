@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#68FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_account_custom"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tint="#2F68DC"
+            app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_custom"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/name"
+                android:textColor="#0A0B0B" />
+
+            <TextView
+                android:id="@+id/tv_lastName_custom"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/lastName"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tv_number_custom"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/number"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_call_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tint="#87CD5A"
+                    app:srcCompat="@drawable/ic_baseline_call" />
+
+                <ImageView
+                    android:id="@+id/img_edit_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tint="#FFC107"
+                    app:srcCompat="@drawable/ic_baseline_edit" />
+
+                <ImageView
+                    android:id="@+id/img_delete_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tint="#EA1010"
+                    app:srcCompat="@drawable/ic_baseline_delete_forever" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

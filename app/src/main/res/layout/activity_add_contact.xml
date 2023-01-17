@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/global_layout_addActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimage"
+    tools:context=".AddContact">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_title_addContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="111dp"
+                    android:gravity="center"
+                    android:text="@string/addContact"
+                    android:textAllCaps="false"
+                    android:textColor="#B11D1D"
+                    android:textSize="48sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_name_addContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/name"
+                    android:textColor="#4A4848"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_name_addContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_marginBottom="30dp"
+                    android:ems="10"
+                    android:hint="ex: Ahmed"
+                    android:inputType="textPersonName"
+                    android:textAllCaps="false"
+                    android:textColor="#656262"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_lastName_addContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lastName"
+                    android:textColor="#4A4848"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_lastName_addContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:layout_marginBottom="30dp"
+                    android:ems="10"
+                    android:hint="ex: ayari"
+                    android:inputType="textPersonName"
+                    android:textColor="#6A6868"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_number_addContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/number"
+                    android:textColor="#4A4848"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_number_addContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="79dp"
+                    android:layout_marginBottom="30dp"
+                    android:ems="10"
+                    android:hint="ex: 92546875"
+                    android:inputType="phone"
+                    android:textColor="#787575"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_add_addContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_weight="1"
+                        android:text="Add" />
+
+                    <Button
+                        android:id="@+id/btn_cancel_addContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_weight="1"
+                        android:text="Cancel" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/img_return_addActivity"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
