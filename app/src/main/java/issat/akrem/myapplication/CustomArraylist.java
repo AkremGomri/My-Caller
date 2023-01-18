@@ -18,8 +18,10 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import java.io.Serializable;
 import java.util.ArrayList;
+
+import issat.akrem.myapplication.models.ContactUser;
+import issat.akrem.myapplication.services.ContactUserManager;
 
 public class CustomArraylist extends BaseAdapter {
     private static final int REQUST_CALL = 1;
@@ -105,7 +107,7 @@ public class CustomArraylist extends BaseAdapter {
             /* UserManager manager=new UserManager(con);
             manager.deleteContactUserById(); */
             ContactUser c_rm = data.get(position);
-            UserManager manager=new UserManager(con);
+            ContactUserManager manager=new ContactUserManager(con);
             manager.openDB();
             int success = manager.deleteContactUserById(c_rm.id);
             if(success != 0){

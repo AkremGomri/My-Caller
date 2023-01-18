@@ -8,13 +8,14 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import issat.akrem.myapplication.models.ContactUser;
+import issat.akrem.myapplication.services.ContactUserManager;
 
 public class Contact extends AppCompatActivity {
     ImageView plus_icon_addContact;
@@ -23,7 +24,7 @@ public class Contact extends AppCompatActivity {
     ListView lv_contacts;
     ArrayList<ContactUser> usersList;
     CustomArraylist cal;
-    UserManager manager;
+    ContactUserManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +76,7 @@ public class Contact extends AppCompatActivity {
         Log.i("here", "onStart: ");
         //cal.notifyDataSetChanged();
         // viewing all the contacts
-        manager=new UserManager(Contact.this);
+        manager=new ContactUserManager(Contact.this);
         manager.openDB();
         usersList = manager.getAllContactUsers();
         manager.closeDB();

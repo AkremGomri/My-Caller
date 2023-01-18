@@ -2,7 +2,7 @@ package issat.akrem.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -11,7 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.Serializable;
+import issat.akrem.myapplication.models.ContactUser;
+import issat.akrem.myapplication.services.ContactUserManager;
 
 public class AddContact extends AppCompatActivity {
 
@@ -90,10 +91,10 @@ public class AddContact extends AppCompatActivity {
 
                 String id = extras.getString("id");
 
-                UserManager manager=new UserManager(AddContact.this);
+                ContactUserManager manager=new ContactUserManager(AddContact.this);
 
                 manager.openDB();
-                long a = manager.editContactUser(new ContactUser(id, name, lastName, number));
+                long a = manager.editContactUser(new ContactUser(id, name, lastName, number, null));
                 manager.closeDB();
 
                 if(a==1){
@@ -103,10 +104,15 @@ public class AddContact extends AppCompatActivity {
                 }
             } else {
                 //The key argument here must match that used in the other activity
+                SharedPreferences preferences = getSharedPreferences("myUserAccount", MODE_PRIVATE);
+                String email = preferences.getString("email", "");
 
-                UserManager manager = new UserManager(AddContact.this);
+
+                ContactUserManager manager = new ContactUserManager(AddContact.this);
                 manager.openDB();
-                long a = manager.addContactUser(new ContactUser(name, lastName, number));
+                System.out.println("here we are: "+email);
+                long a = manager.addContactUser(new ContactUser(name, lastName, number, email));
+                System.out.println("here we are");
                 manager.closeDB();
                 if (a == -1) {
                     Toast.makeText(AddContact.this, "Problem incountred, could not add user", Toast.LENGTH_LONG).show();

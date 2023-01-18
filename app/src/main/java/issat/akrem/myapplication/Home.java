@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
+import issat.akrem.myapplication.models.ContactUser;
+
 public class Home extends AppCompatActivity {
     public static ArrayList<ContactUser> data = new ArrayList<ContactUser>();
     @Override

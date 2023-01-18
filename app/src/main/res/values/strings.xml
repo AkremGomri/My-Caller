@@ -3,6 +3,7 @@
     <string name="welcome">welcome</string>
     <string name="email">e-mail</string>
     <string name="password">password</string>
+    <string name="retypePassword">retype password</string>
     <string name="validate">validate</string>
     <string name="quit">quit</string>
     <string name="contact">contact</string>
@@ -10,4 +11,7 @@
     <string name="name">name</string>
     <string name="lastName">last name</string>
     <string name="number">number</string>
+    <string name="redirectTosignUp">Create a new account</string>
+    <string name="redirectTosignIn">you allready have an account</string>
+    <string name="signUp">Sign Up</string>
 </resources>

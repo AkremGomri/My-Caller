@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".AddContact"></activity>
+        <activity android:name=".SignUp"></activity>
+        <activity android:name=".AddContact" />
         <activity android:name=".Contact" />
         <activity android:name=".Home" />
         <activity android:name=".login" />
